@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handwriting to Text Detector</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Handwriting to Text Detector</h1>
+    
+    <div class="drawing-area">
+      <div id="canvas-container"></div>
+      <div class="controls">
+        <button id="clear-btn">Clear</button>
+        <button id="recognize-btn">Recognize Text</button>
+      </div>
+    </div>
+    
+    <div class="result-area">
+      <h2>Recognized Text:</h2>
+      <div id="loading" class="hidden">Processing...</div>
+      <div id="result-text"></div>
+      <div id="confidence-meter">
+        <div class="confidence-label">Confidence:</div>
+        <div class="meter-container">
+          <div id="confidence-bar"></div>
+        </div>
+        <div id="confidence-value">0%</div>
+      </div>
+    </div>
+    
+    <div class="instructions">
+      <h3>Instructions:</h3>
+      <ol>
+        <li>Write text clearly in the drawing area above</li>
+        <li>Click "Recognize Text" to convert your handwriting</li>
+        <li>Use "Clear" to start over</li>
+      </ol>
+      <p>Tips: Write horizontally in clear, separated characters for best results.</p>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
